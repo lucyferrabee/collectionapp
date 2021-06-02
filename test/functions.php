@@ -8,7 +8,7 @@ class functions extends TestCase
 {
     public function testformatRecordsForDisplaySuccess()
     {
-        $input = ["Artist"=>"artist","Title"=> "title", "Rating"=>"rating", "Released"=>1993, "Condition"=>"condition"];
+        $input = ['Artist' => 'artist','Title' => 'title', 'Rating' => 'rating', 'Released' => 1993, 'Condition' => 'condition'];
         $result = formatRecordsForDisplay($input);
         $this->assertIsString($result);
     }
