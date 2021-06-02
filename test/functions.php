@@ -4,15 +4,20 @@ require '../functions.php';
 
 use PHPUnit\Framework\TestCase;
 
-class functions extends TestCase{
-    public function testformatRecordsForDisplay()
+class functions extends TestCase
+{
+    public function testformatRecordsForDisplaySuccess()
     {
-          $input = ["Artist"=>"artist","Title"=> "title", "Rating"=>"rating", "Released"=>1993, "Condition"=>"condition"];
+        $input = ["Artist"=>"artist","Title"=> "title", "Rating"=>"rating", "Released"=>1993, "Condition"=>"condition"];
         $result = formatRecordsForDisplay($input);
-          $this->assertIsString($result);
+        $this->assertIsString($result);
     }
-
-
-   }
+    public function testformatRecordsForDisplayMalformed()
+    {
+        $input = 10;
+        $this->expectException(TypeError::class);
+        $result = formatRecordsForDisplay($input);
+    }
+}
 
 
