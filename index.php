@@ -5,18 +5,15 @@ include_once 'functions.php';
 <html lang="en">
 <!DOCTYPE html>
 <html>
-<head>
-    <link href="normalize.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-
-
-<div class="heading"></div><h1>Martin's Record Collection</h1></div>
-<?php
-$db = getDB();
-echo display(extractFromDB($db));?>
-<div class="container">
-<head>
+    <head>
+        <link href="normalize.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <div class="heading"></div><h1>Martin's Record Collection</h1></div>
+        <?php
+        $db = getDB();
+        echo display(extractFromDB($db));?>
+    <div class="container">
     <h3>Want to add to your collection? Insert your new record below.</h3><br></head>
 <body>
 <form action="add_to_db.php">
@@ -50,4 +47,3 @@ echo display(extractFromDB($db));?>
 </div>
 </body>
 </html>
-

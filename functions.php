@@ -1,5 +1,4 @@
 <?php
-
 function getDB(): PDO
 {
     $db = new PDO('mysql:host=db; dbname=collectionapp', 'root', 'password');
@@ -43,7 +42,7 @@ function applyToDB()
         $released = $_GET['released'];
         $condition = $_GET['condition'];
         $sql = 'INSERT INTO `records` (`Artist`, `Title`, `Rating`, `Released`, `Condition`)
-    VALUES (:Artist, :Title, :Rating, :Released, :Condition)';
+        VALUES (:Artist, :Title, :Rating, :Released, :Condition)';
         $statement = $db->prepare($sql);
         $statement->execute([
             ':Artist' => $artist,

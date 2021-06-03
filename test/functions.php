@@ -47,5 +47,3 @@ class functions extends TestCase
         $result = display($input);
     }
 }
-
-
