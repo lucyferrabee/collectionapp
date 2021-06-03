@@ -15,7 +15,7 @@ include_once 'functions.php';
         $db = getDB();
         echo display(extractFromDB($db));?>
     <div class="container">
-    <h3>Want to add to your collection? Insert your new record below.</h3><br></head>
+    <h3>Want to add to your collection? Insert your new record below.</h3><br>
 <form action="add_to_db.php">
     <label>Artist</label>
     <input type="text" name="artist">
