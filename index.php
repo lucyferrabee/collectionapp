@@ -2,13 +2,14 @@
 include_once 'functions.php';
 ?>
 
-<html lang="en">
 <!DOCTYPE html>
-<body>
+<html lang="en">
     <head>
         <link href="normalize.css" rel="stylesheet" type="text/css">
         <link href="style.css" rel="stylesheet" type="text/css">
+        <title>Martin's Record Collection</title>
     </head>
+    <body>
     <div class="heading"></div><h1>Martin's Record Collection</h1></div>
         <?php
         $db = getDB();

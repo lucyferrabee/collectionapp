@@ -1,7 +1,9 @@
 <?php
 
-//Connects the programme to the database from the sql host
-//@return PDO the database
+/**
+ * Connects the programme to the database from the sql host
+ * @return PDO the database
+ **/
 function getDB(): PDO
 {
     $db = new PDO('mysql:host=db; dbname=collectionapp', 'root', 'password');
@@ -9,9 +11,11 @@ function getDB(): PDO
     return $db;
 }
 
-//Collects the relevant fields from the database
-//@param $db the extracted database from getDB()
-//@return array of extracted data
+/**
+ * Collects the relevant fields from the database
+ * @param $db the extracted database from getDB()
+ * @return array of extracted data
+ **/
 function extractFromDB(PDO $db): array
 {
     $query = $db->prepare('SELECT `Title`, `Rating`, `Released`, `Condition`, `Artist` FROM `records`;');
@@ -20,9 +24,11 @@ function extractFromDB(PDO $db): array
     return $records;
 }
 
-//Creates a string of concatenated information from the database to display
-//@param $array array the data extracted from extractFromDB($db)
-//@return string to display
+/**
+ * Creates a string of concatenated information from the database to display
+ * @param $array array the data extracted from extractFromDB($db)
+ * @return string to display
+**/
 function display(array $array): string
 {
     $result = '';
@@ -40,7 +46,9 @@ function display(array $array): string
     return $result;
 }
 
-//Validates the information input into form, assigns them variables to insert into db
+/**
+ * Validates the information input into form, assigns them variables to insert into db
+ **/
 function applyToDB()
 {
     $db = getDB();
@@ -61,10 +69,7 @@ function applyToDB()
             ':Released' => $released,
             ':Condition' => $condition
         ]);
-        if ($executed == true) {
-            header('Location: index.php');
-        }
-    } else {
-        header('Location: index.php');
+
     }
+    header('Location: index.php');
 }
