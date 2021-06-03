@@ -14,7 +14,6 @@ h1 {
 }
 
 .heading {
-
     color: white;
     width: 600px;
 }
@@ -32,6 +31,7 @@ h3 {
     background-size: 300px;
     background-repeat: no-repeat;
     padding: 5px;
+    padding-bottom: 90px;
 }
 
 .container {
@@ -51,4 +51,5 @@ form {
 
 img {
     width: 20%;
+    padding-bottom: 90px;
 }
