@@ -6,17 +6,27 @@ use PHPUnit\Framework\TestCase;
 
 class functions extends TestCase
 {
-    public function displaySuccess()
+    public function testdisplaySuccess()
     {
-        $input = ['Artist' => 'artist','Title' => 'title', 'Rating' => 'rating', 'Released' => 1993,
-            'Condition' => 'condition'];
+        $input = [
+            'Artist' => 'artist',
+            'Title' => 'title',
+            'Rating' => 'rating',
+            'Released' => 1993,
+            'Condition' => 'condition'
+        ];
         $result = display($input);
         $this->assertIsString($result);
     }
-    public function displayFailure()
+    public function testdisplayFailure()
     {
-        $input = ['Artist' => 'artist','Title' => 'title', 'Rating' => 'rating', 'Released' => 'string',
-            'Condition' => 'condition'];
+        $input = [
+            'Artist' => 'artist',
+            'Title' => 'title',
+            'Rating' => 'rating',
+            'Released' => 'string',
+            'Condition' => 'condition'
+        ];
         $expected = 'Something went wrong';
         $result = display($input);
         $this->assertIsString($result);

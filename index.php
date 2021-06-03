@@ -4,7 +4,7 @@ include_once 'functions.php';
 
 <html lang="en">
 <!DOCTYPE html>
-<html>
+<body>
     <head>
         <link href="normalize.css" rel="stylesheet" type="text/css">
         <link href="style.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,6 @@ include_once 'functions.php';
         echo display(extractFromDB($db));?>
     <div class="container">
     <h3>Want to add to your collection? Insert your new record below.</h3><br></head>
-<body>
 <form action="add_to_db.php">
     <label>Artist</label>
     <input type="text" name="artist">
