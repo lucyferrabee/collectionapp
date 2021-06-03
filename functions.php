@@ -7,17 +7,29 @@ function getDB(): PDO
     return $db;
 }
 
-function formatRecordsForDisplay(array $record): string
+function extractFromDB(PDO $db): array
 {
-    return 'Artist: ' . $record['Artist'] . '<br>' . 'Title:  ' . $record['Title'] . '<br>Rating:  ' .
-        $record['Rating'] . '<br>Release Date:  ' . $record['Released'] .
-        '<br>Condition:  ' . $record['Condition'] . '<br>' . '<br>';
+    $query = $db->prepare('SELECT `Title`, `Rating`, `Released`, `Condition`, `Artist` FROM `records`;');
+    $query->execute();
+    $records = $query->fetchALL();
+    return $records;
 }
 
-function displayRecords(array $records)
+function display(array $array): string
 {
-    foreach ($records as $record) {
-        echo formatRecordsForDisplay($record);
+    $result = '';
+    foreach ($array as $display) {
+        if (is_Array($display)) {
+            $result .= '<div class="records"><h2>' . $display['Artist'] . ' - ' . $display['Title'] . '</h2>';
+            $result .= '<p>' . 'Rating: ' . $display['Rating'] . '</p>';
+            $result .= '<p>' . 'Release date: ' . $display['Released'] . '</p>';
+            $result .= '<p>' . 'Condition: ' . $display['Condition'] . '</p><br>';
+            $result .= '<br><br><br><br></div>';
+
+        } else {
+            return 'Invalid information!';
+        }
     }
+    return $result;
 }
 
