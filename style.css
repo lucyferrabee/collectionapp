@@ -1,0 +1,54 @@
+body {
+    background-color: #64b5ae;
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    background-image: url("background.jpeg");
+    background-repeat: repeat;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    padding-right: 1200px;
+    color: white;
+}
+
+.heading {
+
+    color: white;
+    width: 600px;
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.records {
+    text-align: left;
+    background-color: white;
+    width: 300px;
+    background-image: url("vinyl3.jpg");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    margin: 20%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form {
+    margin: 10%;
+    flex-wrap: wrap;
+    color: black;
+    text-align: left;
+    background-color: white;
+}
+
+img {
+    width: 20%;
+}
