@@ -17,7 +17,7 @@ $db = getDB();
 echo display(extractFromDB($db));?>
 <div class="container">
 <head>
-    <h3>Please insert your new record below.</h3><br></head>
+    <h3>Want to add to your collection? Insert your new record below.</h3><br></head>
 <body>
 <form action="add_to_db.php">
     <label>Artist</label>
@@ -27,7 +27,7 @@ echo display(extractFromDB($db));?>
     <input type="text" name="title">
     <br><br>
     <label>Year of Release</label>
-    <input name="released" min="1900" max="2100" type="integer">
+    <input name="released" min="1900" max="2100" type="number" step="1">
     <br><br>
     <label for="condition">Condition</label>
     <select name="condition">

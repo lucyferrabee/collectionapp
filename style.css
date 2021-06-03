@@ -9,12 +9,12 @@ body {
 }
 
 h1 {
-    padding-right: 1000px;
+    padding-right: 800px;
     color: white;
 }
 
 .heading {
-    padding-right: 1000px;
+    padding-right: 600px;
     color: white;
     width: 600px;
 }
@@ -31,6 +31,7 @@ h3 {
     background-image: url("vinyl3.jpg");
     background-size: 300px;
     background-repeat: no-repeat;
+    padding: 5px;
 }
 
 .container {
@@ -38,18 +39,16 @@ h3 {
     margin: 20%;
     flex-wrap: wrap;
     justify-content: space-around;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 form {
     margin: 10%;
     flex-wrap: wrap;
-    justify-content: space-between;
-    color: white;
+    color: black;
     text-align: left;
+    background-color: white;
 }
 
 img {
-    width: 25%;
+    width: 20%;
 }

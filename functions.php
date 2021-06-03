@@ -27,7 +27,7 @@ function display(array $array): string
             $result .= '<br><br><br><br></div>';
 
         } else {
-            return 'Invalid information!';
+            return 'Something went wrong';
         }
     }
     return $result;
