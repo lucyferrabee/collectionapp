@@ -14,9 +14,10 @@ function formatRecordsForDisplay(array $record): string
         '<br>Condition:  ' . $record['Condition'] . '<br>' . '<br>';
 }
 
-function displayRecords(array $records): string
+function displayRecords(array $records)
 {
     foreach ($records as $record) {
         echo formatRecordsForDisplay($record);
     }
 }
+
