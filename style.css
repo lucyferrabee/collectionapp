@@ -11,11 +11,15 @@ body {
 h1 {
     padding-right: 1200px;
     color: white;
+    width: 600px;
+
 }
 
 .heading {
     color: white;
     width: 600px;
+    padding-right: 1200px;
+
 }
 
 h3 {

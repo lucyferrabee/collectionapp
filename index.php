@@ -10,7 +10,7 @@ include_once 'functions.php';
         <title>Martin's Record Collection</title>
     </head>
     <body>
-    <div class="heading"></div><h1>Martin's Record Collection</h1></div>
+    <div class="heading"><h1>Martin's Record Collection</h1></div>
         <?php
         $db = getDB();
         echo display(extractFromDB($db));?>
@@ -44,6 +44,7 @@ include_once 'functions.php';
     <br><br>
     <input type="submit" value="Submit">
     <br><br>
+</form>
 </div>
 </body>
 </html>
